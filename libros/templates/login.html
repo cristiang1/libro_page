@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	{% block estilos %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet"> 
+	{% endblock %}
+</head>
+<body>
+	<div class="contenedor">
+		<a href="#openmodal" class="open">login</a>
+		<section id="openmodal" class="modalDialog">
+			<section class="modal">
+				<a href="#close" class="close">X</a>
+
+				<div class="ventana_flotante">
+					<form action="" method="POST" enctype="miltipart/form-data">
+						<h2 id="h2">Login</h2>
+						{% csrf_token %}
+						{{ formulario.usuario}}
+						{{ formulario.clave }}	
+						<input id="input" type="submit" value = "Sign me in">
+					</form>	
+				</div>
+			</section>			
+		</section>
+	</div>
+</body>
+</html>

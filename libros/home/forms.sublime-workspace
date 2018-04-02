@@ -1,0 +1,459 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"HE",
+				"HEADER\tTag"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"tr",
+				"tr\tTag"
+			],
+			[
+				"bore",
+				"border"
+			],
+			[
+				"alin",
+				"align-content"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"W",
+				"width"
+			],
+			[
+				"mo",
+				"model"
+			],
+			[
+				"nombre",
+				"nombre_editorial"
+			],
+			[
+				"model",
+				"models"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"h",
+				"h1\tTag"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"Te",
+				"TextInput"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"cla",
+				"clave"
+			],
+			[
+				"sexo",
+				"sexo_list"
+			],
+			[
+				"form",
+				"forms"
+			],
+			[
+				"we",
+				"widget"
+			],
+			[
+				"for",
+				"formulario"
+			],
+			[
+				"contacto",
+				"contacto_form"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"mis",
+				"mis_estudios"
+			],
+			[
+				"mi",
+				"mis_estudios2"
+			],
+			[
+				"te",
+				"telefono"
+			],
+			[
+				"n",
+				"natalidad"
+			],
+			[
+				"na",
+				"nacimiento"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"border",
+				"border-right"
+			],
+			[
+				"borde",
+				"border"
+			],
+			[
+				"FO",
+				"font-size"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"r",
+				"request"
+			],
+			[
+				"ho",
+				"Home"
+			],
+			[
+				"col",
+				"col-md-9"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"RE",
+				"required\tAttr"
+			],
+			[
+				"pa",
+				"placeholder\tAttr"
+			],
+			[
+				"col-md",
+				"col-md-10"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"di",
+				"div\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "instal",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/static/css/index.css",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/templates/autor.html",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/templates/index.html",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/home/urls.py",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/home/views.py",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/templates/libro.html",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/static/css/libro.css",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/home/forms.py",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/static/css/autor.css",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/home/models.py",
+		"/C/Users/Aprendiz/Desktop/pruebas/index.html",
+		"/C/Users/Aprendiz/Desktop/pruebas/css/style.css",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/views.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Pagina_web/settings.py",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/templates/base.html",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/libros/settings.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/forms.py",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/libros/urls.py",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/home/template/autor.html",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/home/admin.py",
+		"/C/Users/Aprendiz/Desktop/libro_based/Entorno/libros/home/template/Autor",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/models.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/admin.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/db.sqlite3",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/templates/Informacion.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/templates/registrarse.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/templates/principal.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/templates/contacto.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/templates/Hobies.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Pagina_web/urls.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/statics/css/style_informacion.css",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/statics/css/style_hobbies.css",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/statics/css/style_contacto.css",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/statics/css/style_registrarse.css",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/statics/css/style_principal.css",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/urls.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/__init__.py",
+		"/C/Users/Aprendiz/AppData/Local/Programs/Git/ReleaseNotes.html",
+		"/C/Users/Aprendiz/.gitconfig",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/templates/Empleados.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/templates/Empresa.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/templates/Hobies.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/templates/Informacion.html",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/templates/css/style.css",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/tests.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Home/apps.py",
+		"/C/Users/Aprendiz/Desktop/Page/Entorno/Pagina_web/Pagina_web/wsgi.py",
+		"/C/Users/Aprendiz/Desktop/Nueva carpeta/actividades/act_af_fundamentos_asociar.html",
+		"/C/Users/Aprendiz/Desktop/Nueva carpeta/index.html",
+		"/C/Users/Aprendiz/Desktop/d.html",
+		"/C/Users/Aprendiz/Desktop/mascotas/css/style.css",
+		"/C/Users/Aprendiz/Desktop/mascotas/index.html",
+		"/C/Users/Aprendiz/Desktop/project/bancoop/index.html",
+		"/C/xampp/anonymous/onefile.html",
+		"/C/Users/Aprendiz/Desktop/actividades/act_af_fundamentos_asociar.html",
+		"/C/Users/Aprendiz/Desktop/actividades.html",
+		"/C/Users/Aprendiz/Desktop/index.html",
+		"/C/Users/Aprendiz/Desktop/actividad/index.html",
+		"/C/Users/Aprendiz/Desktop/actividad/css/mystyle.css",
+		"/C/Users/Aprendiz/Desktop/oa_html5/ejercicio html5/index.html",
+		"/C/Users/Aprendiz/Desktop/ejercicio html5/index.html",
+		"/C/Users/Aprendiz/Desktop/ejercicio html5/css/style.css"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "forms.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

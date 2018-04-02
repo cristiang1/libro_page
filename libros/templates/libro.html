@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consultar Libro</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/libro.css'%}">
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+</head>
+<body>
+	
+	<nav>
+		<ul>
+			<li><a href="{% url "inicio" %}">Inicio</a></li>
+			<li><a href="{% url "autor" %}">Autores</a></li>
+			<li><a class="active" href="{% url "libros" %}">Libros</a></li>
+			<li><a href="#">Genero</a></li>
+			<li><a href="#">Editoriales</a></li>
+		</ul>
+	</nav>
+	
+	<div id="header">
+		<h2>LIBROS</h2>		
+	</div>
+
+	{% if info_enviado %}
+			<table id="table">
+				{% for i in lista %}
+					<tr>
+
+						<td class="td">titulo</td>
+						<td class="td">Sinopsis</td>
+						<td class="td">Publicado en</td>
+						<td class="td">fecha publicacion</td>
+						<td class="td">numero paginas</td>
+						<td class="td">truduccion</td>
+						<td class="td">titulo traduccion</td>
+						<td class="td">codigo</td>
+
+					</tr>
+					<tr>
+						<td class="td">{{ i.titulo }}</td>
+
+						<td class="td">{{ i.prologo}}</td>
+
+						<td class="td">{{ i.ciudad_publicacion }}</td>
+
+						<td class="td">{{ i.fecha_publicacion }}</td>
+
+						<td class="td">{{ i.num_paginas }}</td>
+						
+						<td class="td">{{ i.traduccion }}</td>
+						
+						<td class="td">{{ i.titulo_traduccion }}</td>
+						
+						<td class="td">{{ i.codigo_isbn }}</td>
+						
+					</tr>
+				{% endfor %}
+			</table>
+	{% else %}
+
+			
+			<form action="" method="POST">
+				{% csrf_token %}
+				{{ formularilibro.titulo_libro }}
+				<input class="btn" type="submit" name="Enviar">
+			</form>
+	{% endif %}	
+</body>
+</html>

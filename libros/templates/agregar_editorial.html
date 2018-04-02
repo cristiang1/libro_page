@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>agregar editorial</title>
+</head>
+<body>
+	<form action="" method="POST" enctype="multipart/form-data">
+		<h2>Agregar editorial</h2>
+		{% csrf_token %}
+		{{ formularioe.as_p }}
+		<input class="btn" type="submit" name="Enviar">
+	</form>
+</body>
+</html>

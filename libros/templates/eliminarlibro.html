@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eliminar libro</title>
+</head>
+<body>
+	{% if inf_enviado %}
+		<h2>Hecho...</h2>
+		<p>{{ eliminando }}</p>
+	{% else %}
+		<form action="" method="POST">
+			<h2>eliminar libro</h2>
+			{% csrf_token %}
+			{{ formularioelim.as_p }}
+			<input class="btn" type="submit" name="Enviar">
+		</form>
+	{% endif %}
+</body>
+</html>

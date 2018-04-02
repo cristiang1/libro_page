@@ -1,0 +1,65 @@
+{% load staticfiles %}
+body{
+	background-image: url("/media/img-template/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+#img{
+    height:590px;
+    width: 100%;
+}
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 25px;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li {
+    border-radius: 25px;
+    float: left;
+}
+
+li:last-child {
+    border-radius: 25px;
+}
+ul img{
+    margin: 0.2%;
+    height: 40px;
+    width: 40px;
+    float: right;
+}
+.active{
+    background-color: #111;
+}
+/*.ventana_flotante {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 6px 6px 6px 6px;
+    bottom: 50px;
+    left: auto;
+    margin-left: -120px;
+    padding: 10px 0 0;
+    position: fixed;
+    text-align: center;
+    width: 90px;
+    z-index: 15;
+}*/

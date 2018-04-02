@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>agregar libro</title>
+</head>
+<body>
+	<form action="" method="POST" enctype="multipart/form-data">
+			<h2>Agregar libro</h2>
+			{% csrf_token %}
+			{{ formulariol.as_p }}
+			<input class="btn" type="submit" name="Enviar">
+		</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consultar autor</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/autor.css'%}">
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+	
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="{% url "inicio" %}">Inicio</a></li>
+			<li><a class="active" href="{% url "autor" %}">Autores</a></li>
+			<li><a href="{% url "libros" %}">Libros</a></li>
+			<li><a href="#">Genero</a></li>
+			<li><a href="#">Editoriales</a></li>
+			<img src="/media/ {{ usuario.png }}" alt="">
+		</ul>
+	</nav>
+	<div id="header">
+		<h2>AUTORES</h2>		
+	</div>
+
+	{% if info_enviado %}
+				{% for i in lista %}
+					<div class="list">
+						<img src="/media/{{i.foto}}" alt="{{i.nombre}}">
+						<div class="texto">
+							{{ i.nombre }}
+							{{ i.edad }}
+							{% for j in lista_libros %}
+								{{ j.titulo }}
+							{% endfor %}
+						</div>
+					</div>
+				{% endfor %}
+	{% else %}
+
+			
+			<form action="" method="POST">
+				{% csrf_token %}
+				{{ formulario.nombre_autor }}
+				<input class="btn" type="submit" name="Enviar">
+			</form>
+	{% endif %}	
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base_index.css' %}">
+	{% block estilos%}
+	{% endblock%}
+	<meta charset="utf-8"/>
+	<title>
+		{% block titulo %}
+		{% endblock %}	
+	</title>
+</head>
+<body>
+	<header>
+		{% block header %}
+		{% endblock %}
+	</header>
+	<nav>
+		{% block nav %}
+		{% endblock %}
+	</nav>
+	<section>
+		{% block contenido %}
+		{% endblock %}	
+	</section>
+</body>
+</html>

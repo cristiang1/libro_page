@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eliminar genero</title>
+</head>
+<body>
+	<form action="" method="POST">
+		<h2>eliminar genero</h2>
+		{% csrf_token %}
+		{{ formulario.as_p }}
+		<input class="btn" type="submit" name="enviar">
+	</form>
+</body>
+</html>

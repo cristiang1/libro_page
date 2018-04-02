@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>agregar genero</title>
+</head>
+<body>
+	<form action="" method="POST" enctype="multipart/form-data">
+		<h2>Agregar Genero</h2>
+		{% csrf_token %}
+		{{ formulariog.as_p }}
+		<input class="bnt" type="submit" value="Enviar">
+	</form>
+</body>
+</html>
