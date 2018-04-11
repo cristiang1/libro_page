@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>registro</title>
+</head>
+<body>
+	{% if info_enviado %}
+		{{ error }}
+	{% else %}
+	<form action="" method="POST">
+		<h2>registrate es gratis</h2>
+		{% csrf_token %}
+		{{ formulario.username }}
+		<br>
+		{{ formulario.correo }}
+		<br>
+		{{ formulario.password }}
+		<br>
+		{{ formulario.confipassword }}
+		<br>
+		<input class="btn" type="submit" name="Enviar" value="AZOPUTA MADRE">
+	</form>
+	{% endif %}
+</body>
+</html>

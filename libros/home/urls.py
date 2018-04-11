@@ -5,7 +5,7 @@ from .views import *
 urlpatterns = [
    	path('autor/', Vista_autor, name="autor"),
    	path('libro/', Vista_libro, name="libros"),
-   	path('index/', Vista_index, name="inicio"),
+   	path('', Vista_index, name="inicio"),
    	path('administer/', Vista_admin, name="admin"),
    	path('agregarlibro/', Vista_agregarl, name="agregarl"),
    	path('agregarautor/', Vista_agregara, name="agregara"),
@@ -17,5 +17,6 @@ urlpatterns = [
       path('eliminareditorial/', Vista_eliminare, name="eliminare"),
       path('prueba/', Vista_prueba, name="pruebas"),
       path('logout/', Vista_logout, name="cierre"),
+      path('registro/', Vista_registro, name="registro"),
       
 ]

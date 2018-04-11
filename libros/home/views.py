@@ -30,7 +30,7 @@ def Vista_admin(request):
 #metodo logout
 def Vista_logout(request):
 	logout(request)
-	return redirect('/index/')
+	return redirect('inicio')
 
 #mostrar vista busqueda_autor
 def Vista_autor(request):
@@ -79,7 +79,7 @@ def Vista_agregarl(request):
 	else:
 		formulariol= agregar_libro_form()
 
-	return render(request, 'agregar_libro.html',locals())
+	return render(request, 'agregar_libro.html', locals())
 
 #agregar editorial
 def Vista_agregare(request):
@@ -108,7 +108,7 @@ def Vista_agregara(request):
 	else:
 		formularioa = agregar_autor_form()
 
-	return render(request, 'agregar_autor.html',locals())
+	return render(request, 'agregar_libro.html',locals())
 
 #agregar genero
 def Vista_agregarg(request):
@@ -211,4 +211,21 @@ def Vista_eliminare(request):
 def Vista_prueba(request):
 	return render(request, 'pruebas.html', locals())
 
+#registro usuarios
+def Vista_registro(request):
+	info_enviado=False
+	if request.method=='POST':
+		formulario = registro_user_form(request.POST)
+		if formulario.is_valid():
+			info_enviado=True
+			usuario = formulario.cleaned_data['user']
+			correo = formularilibro.cleaned_data['correo']
+			contraseña = formularilibro.cleaned_data['password']
+			confirmacion = formularilibro.cleaned_data['confipassword']
+			u = User.objects.create_user(username=usuario, email=email)
+			u = save()
+			return redirect('/registro/')
+		else:
+			formulario = registro_user_form()
+	return render(request, 'registro.html', locals())
 

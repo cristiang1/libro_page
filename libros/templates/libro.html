@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Consultar Libro</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/libro.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/busqueda.css'%}">
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 </head>
 <body>
@@ -23,47 +23,29 @@
 	</div>
 
 	{% if info_enviado %}
-			<table id="table">
-				{% for i in lista %}
-					<tr>
-
-						<td class="td">titulo</td>
-						<td class="td">Sinopsis</td>
-						<td class="td">Publicado en</td>
-						<td class="td">fecha publicacion</td>
-						<td class="td">numero paginas</td>
-						<td class="td">truduccion</td>
-						<td class="td">titulo traduccion</td>
-						<td class="td">codigo</td>
-
-					</tr>
-					<tr>
-						<td class="td">{{ i.titulo }}</td>
-
-						<td class="td">{{ i.prologo}}</td>
-
-						<td class="td">{{ i.ciudad_publicacion }}</td>
-
-						<td class="td">{{ i.fecha_publicacion }}</td>
-
-						<td class="td">{{ i.num_paginas }}</td>
-						
-						<td class="td">{{ i.traduccion }}</td>
-						
-						<td class="td">{{ i.titulo_traduccion }}</td>
-						
-						<td class="td">{{ i.codigo_isbn }}</td>
-						
-					</tr>
-				{% endfor %}
-			</table>
+		{% for i in lista %}
+			<div class="listas">
+				<img src="/media/{{i.portada}}" alt="{{i.titulo}}">
+				<div class="texto">
+					<p>Titulo: </p>{{ i.titulo }}
+					<p>Publicado en: </p>{{ i.ciudad_publicacion }}
+					<p>Fecha publicación: </p>{{ i.fecha_publicacion }}
+					<p>Numero paginas: </p>{{ i.num_paginas }}
+				</div>
+				<div class="texto">
+					<p>Tradución: </p>{{i.traduccion}}
+					<p>Titulo Traducción: </p>{{ i.titulo_traduccion }}
+					<p>Codigo ISBN: </p>{{ i.codigo_isbn }}
+				</div>
+			</div>
+		{% endfor %}
 	{% else %}
 
 			
 			<form action="" method="POST">
 				{% csrf_token %}
 				{{ formularilibro.titulo_libro }}
-				<input class="btn" type="submit" name="Enviar">
+				<input id="btn" type="submit" name="Enviar">
 			</form>
 	{% endif %}	
 </body>

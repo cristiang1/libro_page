@@ -7,7 +7,6 @@ Admin
 
 {% block estilos %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}">
-<link rel="alternate" href="{% static 'css/modal_login.css' %}">
 {% endblock %}
 
 <!-- inicio codificacion barra navegacion-->
@@ -48,7 +47,6 @@ Admin
 {% block contenido %}
 
 <!--codificacion del index lista de libros registrados-->
-	<form action="" method="POST">
 		{% for i in libros_registrados %}
 			<div class="lista">
 				<img class="img" src="/media/{{i.portada}}" alt="img_portada_libro">
@@ -61,19 +59,5 @@ Admin
 				</div>
 			</div>
 		{% endfor %}
-	</form>
 <!--fin codificacion del index-->
-
-<!--ventana modal agregar libro-->
-<!--fin ventana agregar libro-->
-
-<!--ventana modal agregar autor-->
-<!--<form action="" method="POST" enctype="multipart/form-data">
-	<h2>Agregar Autor</h2>
-	{% csrf_token %}
-	{{ formularioa.as_p }}
-	<input  class="btn" type="submit" name="Enviar">
-</form>-->
-<!-- fin ventana modal agregar autor-->
 {% endblock %}
-

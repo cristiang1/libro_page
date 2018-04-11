@@ -3,11 +3,11 @@
 <html>
 <head>
 	<title>Consultar autor</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/autor.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/busqueda.css'%}">
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 	
 </head>
-<body>
+<body class="body">
 	<nav>
 		<ul>
 			<li><a href="{% url "inicio" %}">Inicio</a></li>
@@ -19,7 +19,7 @@
 		</ul>
 	</nav>
 	<div id="header">
-		<h2>AUTORES</h2>		
+		<h2 id="title">AUTORES</h2>		
 	</div>
 
 	{% if info_enviado %}
@@ -27,10 +27,10 @@
 					<div class="list">
 						<img src="/media/{{i.foto}}" alt="{{i.nombre}}">
 						<div class="texto">
-							{{ i.nombre }}
-							{{ i.edad }}
+							<p>Nombre: </p>{{ i.nombre }}
+							<p>Edad: </p>{{ i.edad }}
 							{% for j in lista_libros %}
-								{{ j.titulo }}
+								<p>Libros: </p> {{ j.titulo }}
 							{% endfor %}
 						</div>
 					</div>
@@ -41,7 +41,7 @@
 			<form action="" method="POST">
 				{% csrf_token %}
 				{{ formulario.nombre_autor }}
-				<input class="btn" type="submit" name="Enviar">
+				<input id="btn2" type="submit" name="Enviar">
 			</form>
 	{% endif %}	
 </body>
