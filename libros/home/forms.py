@@ -58,12 +58,12 @@ class eliminar_autor_form(forms.Form):
 #registrar usuario
 class registro_user_form(forms.Form):
 	username = forms.CharField(widget = forms.TextInput(attrs={'placeholder': 'USUARIO'}))
-	correo = forms.EmailField(widget = forms.TextInput(attrs={'placeholder': 'EMAIL'}))
+	email = forms.EmailField(widget = forms.TextInput(attrs={'placeholder': 'EMAIL'}))
 	password = forms.CharField(widget = forms.PasswordInput(render_value = True, attrs={'placeholder': 'CONTRASEÑA'}))
 	confipassword = forms.CharField(widget = forms.PasswordInput(render_value = True, attrs={'placeholder': 'CONFIRMAR CONTRASEÑA'}))
 
 	def clean_username(self):
-		username = self.cleanned_data['username']
+		username = self.cleaned_data['username']
 		try:
 			u = User.objects.get(username=username)
 		except User.DoesNotExist:
@@ -72,7 +72,7 @@ class registro_user_form(forms.Form):
 		raise forms.ValidationError('Nombre de usuario ya existe')
 
 	def clean_email(self):
-		email = self.cleanned_data['email']
+		email = self.cleaned_data['email']
 		try: 
 			u = User.objects.get(email=email)
 		except User.DoesNotExist:
@@ -80,8 +80,8 @@ class registro_user_form(forms.Form):
 		raise forms.ValidationError('Email ya registrado')
 
 	def clean_password_two(self):
-		password =self.cleanned_data['password']
-		confipassword = self.cleanned_data['confipassword']
+		password =self.cleaned_data['password']
+		confipassword = self.cleaned_data['confipassword']
 		if password == confipassword:
 			pass
 		else:

@@ -5,7 +5,7 @@
 	El Portal del LIBRO
 {% endblock %}
 {% block estilos %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/modal-login.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/modal-login-registro.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet"> 
 {% endblock %}
 {% block nav %}
@@ -14,8 +14,8 @@
 			<li class="active"><a href="{% url "inicio" %}">Inicio</a></li>
 			<li><a href="{% url "autor" %}">Autores</a></li>
 			<li><a href="{% url "libros" %}">Libros</a></li>
-			<li><a href="#">Genero</a></li>
-			<a href="#openmodal">
+			<li><a href="#registro">Registrate</a></li>
+			<a href="#contenido-user">
 				<img src="/media/img-template/inicio_sesion.png" alt="login">
 			</a>
 		</ul>
@@ -31,8 +31,26 @@
 				{% csrf_token %}
 				{{ formulario.usuario}}
 				{{ formulario.clave }}	
-				<input id="input" type="submit" value = "Sign me in">
+				<input class="input" type="submit" value = "Sign me in">
 			</form>
 		</section>			
 	</section>
+
+	<section id="registro" class="modalDialog">
+		<section class="modal">
+			<a href="#close" class="close">X</a>
+			<form action="" method="POST" enctype="miltipart/form-data">
+				<h2 id="h2">registrate</h2>
+				{% csrf_token %}
+				{{ formulario.username }}
+				{{ formulario.email }}
+				{{ formulario.password }}
+				{{ formulario.confipassword }}
+				<input class="input" type="submit" value="Registrar">
+			</form>
+		</section>			
+	</section>
+	<div class="usercontainer">
+		{{ user.username }}
+	</div>
 {% endblock %}

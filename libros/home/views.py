@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from .forms import *
+from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 
 # Create your views here.
@@ -20,6 +21,23 @@ def Vista_index(request):
 			else:
 				msj = "usuario o clave incorrecto"
 	formulario = login_form()
+
+	#registro usuarios
+	formulario = registro_user_form()
+	if request.method=='POST':
+		formulario = registro_user_form(request.POST)
+		if formulario.is_valid():
+			info_enviado=True
+			usuario = formulario.cleaned_data['username']
+			correo = formulario.cleaned_data['email']
+			contraseña = formulario.cleaned_data['password']
+			confirmacion = formulario.cleaned_data['confipassword']
+			u = User.objects.create_user(username=usuario, email=correo, password=contraseña )
+			u = save()
+			return redirect('/registro/')
+		else:
+			formulario = registro_user_form()
+			
 	return render(request, "index.html", locals())
 
 #mostrar vista admin
@@ -214,18 +232,5 @@ def Vista_prueba(request):
 #registro usuarios
 def Vista_registro(request):
 	info_enviado=False
-	if request.method=='POST':
-		formulario = registro_user_form(request.POST)
-		if formulario.is_valid():
-			info_enviado=True
-			usuario = formulario.cleaned_data['user']
-			correo = formularilibro.cleaned_data['correo']
-			contraseña = formularilibro.cleaned_data['password']
-			confirmacion = formularilibro.cleaned_data['confipassword']
-			u = User.objects.create_user(username=usuario, email=email)
-			u = save()
-			return redirect('/registro/')
-		else:
-			formulario = registro_user_form()
 	return render(request, 'registro.html', locals())
 
