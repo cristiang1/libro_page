@@ -4,18 +4,21 @@
 {% block titulo %}
 	El Portal del LIBRO
 {% endblock %}
+
 {% block estilos %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/modal-login-registro.css' %}">
-	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 {% endblock %}
+
 {% block nav %}
 	<nav>
 		<ul>
 			<li class="active"><a href="{% url "inicio" %}">Inicio</a></li>
 			<li><a href="{% url "autor" %}">Autores</a></li>
 			<li><a href="{% url "libros" %}">Libros</a></li>
-			<li><a href="#registro">Registrate</a></li>
-			<a href="#contenido-user">
+			<li id="nom_usuario"><a href="#" id="user_cierre">{{ user.username }}</a></li>
+			<a href="#" id="user">
 				<img src="/media/img-template/inicio_sesion.png" alt="login">
 			</a>
 		</ul>
@@ -23,34 +26,86 @@
 {% endblock%}
 
 {% block contenido %}
-	<section id="openmodal" class="modalDialog">
-		<section class="modal">
-			<a href="#close" class="close">X</a>
-			<form action="" method="POST" enctype="miltipart/form-data">
-				<h2 id="h2">Login</h2>
-				{% csrf_token %}
-				{{ formulario.usuario}}
-				{{ formulario.clave }}	
-				<input class="input" type="submit" value = "Sign me in">
-			</form>
-		</section>			
-	</section>
 
-	<section id="registro" class="modalDialog">
-		<section class="modal">
-			<a href="#close" class="close">X</a>
-			<form action="" method="POST" enctype="miltipart/form-data">
-				<h2 id="h2">registrate</h2>
-				{% csrf_token %}
-				{{ formulario.username }}
-				{{ formulario.email }}
-				{{ formulario.password }}
-				{{ formulario.confipassword }}
-				<input class="input" type="submit" value="Registrar">
-			</form>
-		</section>			
-	</section>
-	<div class="usercontainer">
-		{{ user.username }}
+<!--container usuario-->
+	<div class="usercontainer" id="oculto">
+		<ul>
+			<li><a href="#" id="btn_inicio_sesion">Iniciar sesión</a></li>
+			<li><a href="#" id="btn_registro">Registrate</a></li>
+		</ul>
 	</div>
+<!--fin container usuario-->
+
+<!--inicio de sesion-->
+	<form action="" method="POST" id="inicio_sesion" class="formulario">
+		<h2 id="h2">Login</h2>
+		{% csrf_token %}
+		{{ formulariol.usuario}}
+		{{ formulariol.clave }}	
+		<input class="input" type="submit" value = "Sign me in">
+	</form>
+<!-- fin de inicio de sesion-->
+
+<!-- inicio form de registro-->
+	<form action="" method="POST" id="registro" class="formulario">
+		<h2 id="h2">registrate</h2>
+		{% csrf_token %}
+		{{ formulario.username }}
+		{{ formulario.email }}
+		{{ formulario.password }}
+		{{ formulario.confipassword }}
+		<input class="input" type="submit" value="Registrar">
+	</form>
+<!--fin de registro -->
+
+<!-- container opciones de usuario-->
+	<div class="usercontainer" id="oculto2">
+		<h4>señor(a): </h4><h3>{{ user.username }}</h3>
+		<ul>
+			<li><a href="{% url 'admin' %}">Administrador</a></li>
+			<li><a href="{% url 'cierre' %}">Cerrar sesión</a></li>			
+		</ul>
+	</div>
+<!-- fin opciones de usuario -->
+{% endblock %}
+
+{% block scripts%}
+	<script>
+		$("#user").click(function(){
+			$("#oculto").toggle()
+		});
+	</script>
+
+	<script>
+		$("#user_cierre").click(function(){
+			$("#oculto2").toggle();
+		});
+	</script>
+
+	{% if user.username != "" %}
+		<script>
+			$("#user").hide();
+		</script>
+	{% else %}
+		<script>
+			$("#user_cierre").hide();
+		</script>
+	{% endif %}
+
+	<script>
+		$("#btn_inicio_sesion").click(function(){
+			$("#inicio_sesion").show();
+			$("#registro").hide();
+			$("#oculto").hide();
+		});
+	</script>
+
+	<script>
+		$("#btn_registro").click(function(){
+			$("#registro").show();
+			$("#inicio_sesion").hide();
+			$("#oculto").hide();
+		});
+	</script>
+
 {% endblock %}

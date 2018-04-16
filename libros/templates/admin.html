@@ -14,10 +14,10 @@ Admin
 {% block nav%}
 	<nav>
 		<ul class="nav">
-			<li><a href="#" class="active">Inicio</a></li>
+			<li><a href="{% url 'inicio' %}">Inicio</a></li>
 			<li><a href="#">Agregar</a>
 				<ul>
-					<li><a href="#openmodal">Libro</a></li>
+					<li><a href="{% url 'agregarl' %}">Libro</a></li>
 				</ul>
 			</li>
 			<li><a href="">Eliminar</a>
@@ -36,9 +36,6 @@ Admin
 					<li><a href="#">Editorial</a></li>
 				</ul>
 			</li>
-			<a href="{% url "cierre" %}">
-				<img src="/media/img-template/cierre_sesion.png" alt="cerrar sesion">
-			</a>
 		</ul>
 	</nav>
 {% endblock %}

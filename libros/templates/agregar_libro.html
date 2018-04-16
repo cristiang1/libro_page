@@ -3,21 +3,63 @@
 <html>
 <head>
 	<title>agregar libro</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'css/modal_forms.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/modal-login-registro.css' %}">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
-	<form action="" method="POST" enctype="multipart/form-data">
-			<h2>Agregar</h2>
+
+	<form action="" method="POST" enctype="multipart/form-data" class="formulario" id="libro">
+			<h2>Agregar libro</h2>
 			{% csrf_token %}
+			<a href="#" class="add" id="agregar">+</a>
 			{{ formulariol.as_p }}
-			<input class="btn" type="submit" name="Enviar">
+			<input id="libro_editorial" class="btn" type="submit" name="Enviar">
 	</form>
 	
-	<form action="" method="POST" enctype="Multipart/form-data">
+	<form action="" method="POST" enctype="Multipart/form-data" class="formulario" id="autor">
+		<h2>agregar autor</h2>
 		{% csrf_token %}
 		{{ formularioa.as_p }}
+		<input id="autor_libro" class="btn" type="submit" name="Enviar" value="Continuar">
+	</form>
+
+	<form action="" method="POST" enctype="Multipart/form-data" class="formulario" id="genero">
+		<h2>agregar genero</h2>
+		{% csrf_token %}
+		{{ formulariog.as_p }}
 		<input class="btn" type="submit" name="Enviar">
 	</form>
 
+	<form action="" method="POST" enctype="Multipart/form-data" class="formulario" id="editorial">
+		<h2>agregar editorial</h2>
+		{% csrf_token %}
+		{{ formularioe.as_p }}
+		<input class="btn" type="submit" name="Enviar">
+	</form>
+	
+	<script>
+		$("#libro").hide();
+		$("#autor").hide();
+		$("#genero").hide();
+		$("#editorial").hide();
+	</script>
+	<script>
+		$("#agregar").click(function(){
+			$("#autor").show();
+			$("#libro").hide();
+		});
+	</script>
+	<script>
+		$("#autor_libro").click(function(){
+			$("#libro").show();
+		});
+	</script>
+	<script>
+		$("#libro_editorial").click(function(){
+			$("#editorial").show();
+			$("#libro").hide();
+			$("#autor").hide();
+		});
+	</script>
 </body>
 </html>

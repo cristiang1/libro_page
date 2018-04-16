@@ -18,11 +18,18 @@
 	</header>
 	<nav>
 		{% block nav %}
+		<li><a href="#">{{ user.username }}</a></li>
 		{% endblock %}
 	</nav>
 	<section>
 		{% block contenido %}
 		{% endblock %}	
 	</section>
+
+	<section>
+		{% block scripts %}
+		{% endblock %}	
+	</section>
+
 </body>
 </html>

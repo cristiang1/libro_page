@@ -9,18 +9,19 @@ from django.contrib.auth import login, logout, authenticate
 def Vista_index(request):
 	usuario=""
 	clave=""
+	formulariol = login_form()
 	if request.method == "POST":
-		formulario = login_form(request.POST)
-		if formulario.is_valid():
-			usuario = formulario.cleaned_data['usuario']
-			clave = formulario.cleaned_data['clave']
+		formulariol = login_form(request.POST)
+		if formulariol.is_valid():
+			usuario = formulariol.cleaned_data['usuario']
+			clave = formulariol.cleaned_data['clave']
 			user = authenticate(username = usuario, password = clave)
 			if user is not None and user.is_active:
 				login(request, user)
-				return redirect("/administer/")
+				return redirect("inicio")
 			else:
 				msj = "usuario o clave incorrecto"
-	formulario = login_form()
+	formulariol = login_form()
 
 	#registro usuarios
 	formulario = registro_user_form()
@@ -93,54 +94,41 @@ def Vista_agregarl(request):
 			libro=formulariol.save(commit=False)
 			libro.save()
 			formulariol.save_m2m()
-			return redirect('/administer/')
+			return render(request, 'agregar_libro.html', locals())
 	else:
 		formulariol= agregar_libro_form()
 
-	return render(request, 'agregar_libro.html', locals())
-
-#agregar editorial
-def Vista_agregare(request):
 	if request.method=='POST':
 		formularioe = agregar_editorial_form(request.POST, request.FILES)
 		if formularioe.is_valid():
 			editoriae=formularioe.save(commit=False)
 			editoriae.save()
 			formularioe.save_m2m()
-			return redirect('/index/')
+			return render(request, 'agregar_libro.html', locals())
 	else:
 		formularioe = agregar_editorial_form()
 
-	return render(request, 'agregar_editorial.html',locals())
-
-
-#agregar autor
-def Vista_agregara(request):
 	if request.method=='POST':
 		formularioa = agregar_autor_form(request.POST, request.FILES)
 		if formularioa.is_valid():
 			autor=formularioa.save(commit=False)
 			autor.save()
 			formularioa.save_m2m()
-			return redirect('/agregarautor/')
+			return render(request, 'agregar_libro.html', locals())
 	else:
 		formularioa = agregar_autor_form()
 
-	return render(request, 'agregar_libro.html',locals())
-
-#agregar genero
-def Vista_agregarg(request):
 	if request.method=='POST':
 		formulariog = agregar_genero_form(request.POST, request.FILES)
 		if formulariog.is_valid():
 			genero=formulariog.save(commit=False)
 			genero.save()
 			formulariog.save_m2m()
-			return redirect('/agregargenero/')
+			return render(request, 'agregar_libro.html', locals())
 	else:
 		formulariog= agregar_genero_form()
 
-	return render(request, 'agregar_genero.html',locals())
+	return render(request, 'agregar_libro.html', locals())
 
 #eliminar libro
 def Vista_eliminarl(request):
